@@ -1,6 +1,12 @@
 # ghxst_taxes
 Taxes for vehicles. Thanks to **Der-Elmoo** for the ESX Script
 
+# Rework
+
+![load1](https://user-images.githubusercontent.com/61068944/178812989-bf334328-982f-4434-8cb7-5fb13ce13fd9.gif)
+**We're currently rewriting some of these files please report any bugs directly to my discord!!**
+
+
 # Installation
 1. Download the script
 2. Drag and Drop it into your resources folder
