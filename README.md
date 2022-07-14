@@ -1,4 +1,4 @@
-# ghxst_taxes
+# ghxst_veh_taxes
 Taxes for vehicles. Thanks to **Der-Elmoo** for the ESX Script
 
 # Installation
