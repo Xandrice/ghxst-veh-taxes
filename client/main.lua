@@ -3,13 +3,13 @@ if Config.FrameWork == "QBCore" then
 end
 
 if Config.FrameWork ~= "QBCore" then
-    local function showAdvancedNotification(tax, vehiclecount)
-        AddTextEntry('VehTaxesNotification', string.format(Translation[Config.Locale]['description'], tax, vehiclecount))
+    function showAdvancedNotification(tax, vehiclecount)
+        AddTextEntry('VehTaxesNotification', _U('message_Ingame', tax, vehiclecount))
         BeginTextCommandThefeedPost('VehTaxesNotification')
-        EndTextCommandThefeedPostMessagetext('CHAR_BANK_MAZE', 'CHAR_BANK_MAZE', false, 9, Translation[Config.Locale]['title'], '')
+        EndTextCommandThefeedPostMessagetext('CHAR_BANK_MAZE', 'CHAR_BANK_MAZE', false, 9, _U('message_Ingame_Title'), '')
     end
 else
-    local function showAdvancedNotification(tax, vehiclecount)
+    function showAdvancedNotification(tax, vehiclecount)
         AddTextEntry('VehTaxesNotification', Lang:t('notify_Ingame.message', {value = tax, value2 = vehiclecount}))
         BeginTextCommandThefeedPost('VehTaxesNotification')
         EndTextCommandThefeedPostMessagetext('CHAR_BANK_MAZE', 'CHAR_BANK_MAZE', false, 9, Lang:t('notify_Ingame.title'), '')

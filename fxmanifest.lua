@@ -6,9 +6,11 @@ description 'QB-Vehicletaxes'
 version 'v1'
 
 shared_scripts {
-    --'@qb-core/shared/locale.lua', --ONLY QBCore
-    --'locales/en.lua', --ONLY QBCore
     'config.lua',
+    --'@qb-core/shared/locale.lua', --ONLY QBCore
+    --'locales/en.lua', -- Only QBCore
+    '@es_extended/locale.lua', -- ONLY ESX
+    'locales/*.lua', -- Only ESX
 }
 
 client_scripts {
@@ -16,7 +18,11 @@ client_scripts {
 }
 
 server_scripts {
-	--'@oxmysql/lib/MySQL.lua', -- ONLY QBCore and ESX-Legacy
-    '@mysql-async/lib/MySQL.lua', -- ONLY ESX
+	'@oxmysql/lib/MySQL.lua', -- ONLY QBCore and ESX-Legacy
+    --'@mysql-async/lib/MySQL.lua', -- ONLY ESX
     'server/*.lua'
+}
+
+dependencies {
+    'es_extended'
 }
